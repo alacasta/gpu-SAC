@@ -2,7 +2,7 @@
 <html lang="en-us">
   <head>
     <meta charset="UTF-8">
-    <title>Gpu-sac by alacasta</title>
+    <title>GPU-SAC by alacasta</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>	
@@ -13,8 +13,8 @@
   </head>
   <body>
     <section class="page-header">
-      <h1 class="project-name">Gpu-SAC</h1>
-      <h2 class="project-tagline">GPU implementation of the SAC-SMA model</h2>
+      <h1 class="project-name">GPU-SAC</h1>
+      <h2 class="project-tagline">A GPU implementation of the SAC-SMA model</h2>
       <a href="https://github.com/alacasta/gpu-SAC" class="btn">View on GitHub</a>
       <a href="https://github.com/alacasta/gpu-SAC/zipball/master" class="btn">Download .zip</a>
       <a href="https://github.com/alacasta/gpu-SAC/tarball/master" class="btn">Download .tar.gz</a>
@@ -26,12 +26,18 @@
 <p>
 GPU-SAC is a GPU implementation of the Sacramento Soil Moisture Accounting (SAC-SMA) model. This hydrological model takes into account soil moisture content and forecast precipitation as well as temperatures and it simulates runoff. 
 More information can be found <a href="http://www.cbrfc.noaa.gov/wsup/sac_sm/cbrfc_sacsma_101_20140731.pdf" class="user-mention">here</a> and <a href="http://www.manureadvisorysystem.wi.gov/app/SACmodel" class="user-mention">here</a>.
-The implementation is fully oriented to nVidia GPUs using the nVidia's CUDA SDK. 
+</p>
+<p>
+The implementation is designed to be applied in distributed implementations of the SAC-SMA as well as the using of a distributed conceptualization to be used in hydraulic models such as  <a href="http://www.hydronia.net/two-dimensional-models/riverflow2d-gpu/" class="user-mention">RiverFlow2D GPU</a>.
+</p>
+<img class="img-responsive" src="img/cpuVSgpu.png" alt="Chania">
+<p>
+Tests made on nVidia Titan Black show that it is possible to reduce in more than two orders of magnitude the computational effort required to compute it compared against Intel Xeon GPU E5-287W v2 @ 3.40 GHz. Note that The GPU code is fully oriented to nVidia GPUs using the nVidia's CUDA SDK. 
 </p>
 
  <h3><a id="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages" aria-hidden="true"><span class="octicon octicon-link"></span></a>About</h3>
 <p>
-Initial development of GPU-SAC is product of a research stay of A. Lacasta under the supervision of P. Restrepo at North Central River Forecast Center at NOAA. This stay was funded by Spanish Ministry of Economy and Competitiveness under the grant EEBB-I-15-10317
+Initial development of GPU-SAC is product of a research stay by A. Lacasta under the supervision of P. Restrepo at North Central River Forecast Center at NOAA. This stay was funded by the Spanish Ministry of Economy and Competitiveness under the grant EEBB-I-15-10317
 </p>
 
  <h3><a id="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages" aria-hidden="true"><span class="octicon octicon-link"></span></a>Liscense</h3>
@@ -40,7 +46,7 @@ GPU-SAC is an OSS licensed under <a href="https://github.com/alacasta/gpu-SAC/bl
 </p>
 
       <footer class="site-footer">
-        <span class="site-footer-owner"><a href="https://github.com/alacasta/gpu-SAC">Gpu-SAC</a> is maintained by <a href="https://github.com/alacasta">alacasta</a>.</span>
+        <span class="site-footer-owner"><a href="https://github.com/alacasta/gpu-SAC">GPU-SAC</a> is maintained by <a href="https://github.com/alacasta">Asier Lacasta</a>.</span>
       </footer>
 
     </section>
