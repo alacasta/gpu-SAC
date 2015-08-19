@@ -30,7 +30,7 @@ In addition, be sure about you have configured the project as you expected in th
 #define VTK 0
 // Generates more output stuff
 #define _DUMP_OUTPUT 0
-// Size of cuda block
+// Size of CUDA block
 #define nThreads 128
 ```
 ## Performance
