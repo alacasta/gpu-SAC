@@ -7,6 +7,32 @@ Schematic of the model is found in the following image ([UC Irvine](http://chrs.
 
 More information can be found [here](http://www.cbrfc.noaa.gov/wsup/sac_sm/cbrfc_sacsma_101_20140731.pdf) and [here](http://www.manureadvisorysystem.wi.gov/app/SACmodel).
 
+## Compilation
+
+You can use GNU Make with the Makefile rules to build the solution. **Note** You can choose wether compiling a CPU or GPU solution by modifying the following flag in the Makefile
+
+```Makefile
+#################################################################
+## Define wether uning CPU (GPU=0) or GPU (GPU=1)
+GPUCOMPUTING=1
+#################################################################
+```
+
+In addition, be sure about you have configured the project as you expected in the sac_define.h file.
+```C
+// Main datatype
+#define _TDATA double
+// Generates random rain grids (x,t)
+#define RANDOMRAIN 1
+// Only information regarding wall clock time is written
+#define SILENTMODE 1
+// Generates VTK output
+#define VTK 0
+// Generates more output stuff
+#define _DUMP_OUTPUT 0
+// Size of cuda block
+#define nThreads 128
+```
 ## Performance
 In the [wiki](https://github.com/alacasta/gpu-SAC/wiki/Computational-Performance) you will find results on different architectures. You are also invited to include your results as well.
 
