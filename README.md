@@ -18,11 +18,11 @@ More information can be found [here](http://www.cbrfc.noaa.gov/wsup/sac_sm/cbrfc
  - __sac_g_engine.*__ Main functions for the SAC-SMA model (GPU)
  - __sac_io.h__ input/output functions
  - __sac_utilities.h__ Miscelanea
- - 
-# Project Website
+
+## Project Website
 Click [here](http://alacasta.github.io/gpu-SAC/) for the GPU-SAC project website. 
 
-## License
+## Licensing
 GPU-SAC is an OSS licensed under [MIT License](https://github.com/alacasta/gpu-SAC/blob/master/LICENSE.txt).
 
 
