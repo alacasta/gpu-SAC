@@ -37,7 +37,7 @@ In addition, be sure about you have configured the project as you expected in th
 In the [wiki](https://github.com/alacasta/gpu-SAC/wiki/Computational-Performance) you will find results on different architectures. You are also invited to include your results as well.
 
 ## Files
-- __GPU-SAC.c__ Testing application. It can be compiled using the Makefile
+- __GPU-SAC.c__ Test application. It can be compiled using the Makefile
 - __LICENSE.txt__ License of the project
 - __Makefile.mak__ Contains the rules for the __make__ command. 
 - __src__
