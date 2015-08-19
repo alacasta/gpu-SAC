@@ -4,62 +4,111 @@
     <meta charset="UTF-8">
     <title>gpu-SAC by alacasta</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>	
+	<script src="js/onepagescroll.min.js"></script>	
+    <link rel="stylesheet" type="text/css" href="stylesheets/onepage-scroll.css" media="screen">
     <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+<link href='http://fonts.googleapis.com/css?family=Poppins' rel='stylesheet' type='text/css'>    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
     <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
   </head>
-  <body>
+  <body onload="loadjs()">
   
 
-    <div id="header">
+
+<div class="main">
+
+    <section id="header" >
+
 	  <div class="page-header">
+	  <a href="https://github.com/alacasta/gpu-SAC"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/52760788cde945287fbb584134c4cbc2bc36f904/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f77686974655f6666666666662e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_white_ffffff.png"></a>
+      <div class="int-box">
+
       <h1 class="project-name">gpu-SAC</h1>
       <h2 class="project-tagline">A GPU implementation of the SAC-SMA model</h2>
       <a href="https://github.com/alacasta/gpu-SAC" class="btn">View on GitHub</a>
       <a href="https://github.com/alacasta/gpu-SAC/zipball/master" class="btn">Download .zip</a>
       <a href="https://github.com/alacasta/gpu-SAC/tarball/master" class="btn">Download .tar.gz</a>
-	  </div>
-    </header>
-
-    <section class="main-content">
-     
-
-<p>
-gpu-SAC is a GPU implementation of the Sacramento Soil Moisture Accounting (SAC-SMA) model. This hydrological model takes into account soil moisture content and forecast precipitation as well as temperatures and it simulates runoff. 
-<center>
-<img align="middle" class="img-responsive" src="img/sac_smal_medium.jpg" alt="Chania">
-</center>
-</p>
-<p>
-More information can be found <a href="http://www.cbrfc.noaa.gov/wsup/sac_sm/cbrfc_sacsma_101_20140731.pdf" class="user-mention">here</a> and <a href="http://www.manureadvisorysystem.wi.gov/app/SACmodel" class="user-mention">here</a>.
-</p>
-<p>
-The implementation is designed to be applied in distributed implementations of the SAC-SMA as well as the using of a distributed conceptualization to be used in hydraulic models such as  <a href="http://www.hydronia.net/two-dimensional-models/riverflow2d-gpu/" class="user-mention">RiverFlow2D gpu</a>.
-</p>
-<img class="img-responsive" src="img/cpuVSgpu.png" alt="Chania">
-<p>
-Tests made on nVidia Titan Black show that it is possible to reduce in more than two orders of magnitude the computational effort required to compute it compared against Intel Xeon gpu E5-287W v2 @ 3.40 GHz. Note that The gpu code is fully oriented to nVidia gpus using the nVidia's CUDA SDK. 
-</p>
-
- <h3><a id="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages" aria-hidden="true"><span class="octicon octicon-link"></span></a>About</h3>
-<p>
-Initial development of gpu-SAC is product of a research stay by A. Lacasta under the supervision of P. Restrepo at North Central River Forecast Center at NOAA. This stay was funded by the Spanish Ministry of Economy and Competitiveness under the grant EEBB-I-15-10317
-</p>
-
- <h3><a id="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages" aria-hidden="true"><span class="octicon octicon-link"></span></a>Liscense</h3>
-<p>
-gpu-SAC is an OSS licensed under <a href="https://github.com/alacasta/gpu-SAC/blob/master/LICENSE.txt">MIT License</a> 
-</p>
-
-      <footer class="site-footer">
+	   </div>
+	  <footer style="position: absolute; right: 10px;  border-top: solid 1px #eff0f1;
+  bottom: 10px;">
         <span class="site-footer-owner"><a href="https://github.com/alacasta/gpu-SAC">gpu-SAC</a> is maintained by <a href="https://github.com/alacasta">Asier Lacasta</a>.</span>
-      </footer>
-
+     </footer>	
+	  </div>
     </section>
 
-  
+    <section class="main-content">
+    <div class="int-box">
+		 <h1><a id="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages" aria-hidden="true"><span class="octicon octicon-link"></span></a>Motivation</h1>
+
+		<p>
+		gpu-SAC is a GPU implementation of the Sacramento Soil Moisture Accounting (SAC-SMA) model. This hydrological model takes into account soil moisture content and forecast precipitation as well as temperatures and it simulates runoff. 
+		<center>
+		<img align="middle" class="img-responsive" src="img/sac_smal_medium.jpg" alt="Chania">
+		</center>
+		</p>
+		<p>
+		More information can be found <a href="http://www.cbrfc.noaa.gov/wsup/sac_sm/cbrfc_sacsma_101_20140731.pdf" class="user-mention">here</a> and <a href="http://www.manureadvisorysystem.wi.gov/app/SACmodel" class="user-mention">here</a>.
+		</p>
+		</div>
+	</section>
+    <section class="main-content">
+    <div class="int-box">
+		<h1><a id="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages" aria-hidden="true"><span class="octicon octicon-link"></span></a>Implementation</h1>
+		<p>
+		The implementation is designed to be applied in distributed implementations of the SAC-SMA as well as the using of a distributed conceptualization to be used in hydraulic models such as  <a href="http://www.hydronia.net/two-dimensional-models/riverflow2d-gpu/" class="user-mention">RiverFlow2D gpu</a>.
+		</p>
+		<img class="img-responsive" src="img/cpuVSgpu.png" alt="Chania">
+		<p>
+		Tests made on nVidia Titan Black show that it is possible to reduce in more than two orders of magnitude the computational effort required to compute it compared against Intel Xeon gpu E5-287W v2 @ 3.40 GHz. Note that The gpu code is fully oriented to nVidia gpus using the nVidia's CUDA SDK. 
+		</p>
+	</div>
+   </section>
+	
+
+    <section class="main-content">
+    <div class="int-box">
+
+		 <h1><a id="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages" aria-hidden="true"><span class="octicon octicon-link"></span></a>About</h1>
+		<p>
+		Initial development of gpu-SAC is product of a research stay by A. Lacasta under the supervision of P. Restrepo at North Central River Forecast Center at NOAA. This stay was funded by the Spanish Ministry of Economy and Competitiveness under the grant EEBB-I-15-10317
+		</p>
+		<h1><a id="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages" aria-hidden="true"><span class="octicon octicon-link"></span></a>Liscense</h1>
+		<p>
+		gpu-SAC is an OSS licensed under <a href="https://github.com/alacasta/gpu-SAC/blob/master/LICENSE.txt">MIT License</a> 
+		</p>
+		<h1><a id="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages" aria-hidden="true"><span class="octicon octicon-link"></span></a>Credits</h1>
+		<p>
+		Background image is propierty of <a href="https://www.flickr.com/photos/closee/">Clint Losee</a>. SAC-SMA scheme is used from <a href="http://chrs.web.uci.edu/research/hydrologic_predictions/activities07.html">UC Irvine</a>. This site also uses <a href="https://getbootstrap.com">Twitter Bootstra</a>, <a href="https://jquery.com">jQuery</a> and <a href="https://github.com/peachananr/purejs-onepage-scroll">One Page Scroll</a>
+		</p>		
+	     <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/alacasta/gpu-SAC">gpu-SAC</a> is maintained by <a href="https://github.com/alacasta">Asier Lacasta</a>.</span>
+     </footer>		
+	</div>
+   </section>
+
+</div>
+
+  <script>
+function loadjs() {
+	onePageScroll(".main", {
+	   sectionContainer: "section",     // sectionContainer accepts any kind of selector in case you don't want to use section
+	   easing: "ease",                  // Easing options accepts the CSS3 easing animation such "ease", "linear", "ease-in", 
+										// "ease-out", "ease-in-out", or even cubic bezier value such as "cubic-bezier(0.175, 0.885, 0.420, 1.310)"
+	   animationTime: 1000,             // AnimationTime let you define how long each section takes to animate
+	   pagination: true,                // You can either show or hide the pagination. Toggle true for show, false for hide.
+	   updateURL: false,                // Toggle this true if you want the URL to be updated automatically when the user scroll to each page.
+	   beforeMove: function(index) {},  // This option accepts a callback function. The function will be called before the page moves.
+	   afterMove: function(index) {},   // This option accepts a callback function. The function will be called after the page moves.
+	   loop: false,                     // You can have the page loop back to the top/bottom when the user navigates at up/down on the first/last page.
+	   keyboard: true,                  // You can activate the keyboard controls
+	   responsiveFallback: false        // You can fallback to normal page scroll by defining the width of the browser in which
+										// you want the responsive fallback to be triggered. For example, set this to 600 and whenever 
+										// the browser's width is less than 600, the fallback will kick in.
+	});
+}
+</script>
   </body>
 </html>
