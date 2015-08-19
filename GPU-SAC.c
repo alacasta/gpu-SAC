@@ -31,14 +31,14 @@ SOFTWARE.
 
 #include <stdio.h>
 
-#include "sac_define.h"
-#include "sac_utilities.h"
-#include "sac_geometry.h"
-#include "sac_engine.h"
+#include "src/sac_define.h"
+#include "src/sac_utilities.h"
+#include "src/sac_engine.h"
+#include "src/sac_io.h"
+
 #include "time.h"
 #include "stdint.h"
 
-#include "sac_io.h"
 #if GPU==1
 #include "cuda.h"
 #include "cuda_runtime.h"
@@ -217,7 +217,7 @@ int main(int argc, char *argv[])
 #if SILENTMODE==0
 	printf ("%s Simulation starts at %s",MSGINFO, asctime(timeinfo));	
 #endif
-	#endif;
+	#endif
 	currentStep=0;
 	while(t<tmax){
 		et=model.prop.et_demand_curve[month-1];
