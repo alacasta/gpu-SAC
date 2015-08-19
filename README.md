@@ -7,6 +7,9 @@ Schematic of the model is found in the following image ([UC Irvine](http://chrs.
 
 More information can be found [here](http://www.cbrfc.noaa.gov/wsup/sac_sm/cbrfc_sacsma_101_20140731.pdf) and [here](http://www.manureadvisorysystem.wi.gov/app/SACmodel).
 
+## Performance
+In the [wiki](https://github.com/alacasta/gpu-SAC/wiki/Computational-Performance) you will find results on different architectures. You are also invited to include your results as well.
+
 ## Files
 - __GPU-SAC.c__ Testing application. It can be compiled using the Makefile
 - __LICENSE.txt__ License of the project
