@@ -1,0 +1,3 @@
+finaltime 240.0
+deltat 1.0
+deltatdump 240.0
