@@ -1,6 +1,6 @@
 #################################################################
 ## Define wether uning CPU (GPU=0) or GPU (GPU=1)
-GPUCOMPUTING=0
+GPUCOMPUTING=1
 #################################################################
 
 # Define C compiler
@@ -21,10 +21,7 @@ C_DEBUG_FLAGS = --debug-device
 C_MUD_FLAGS = -fmudflap -lmudflap
 C_OPT_FLAGS =
 C_WARN_FLAGS = -Wall
-
-ifeq ($(DEBUG),no)
-	CFLAGS=$(CUDA_REQ_FLAGS) $(C_REQ_FLAGS) $(C_OPT_FLAGS)
-endif
+CFLAGS=$(CUDA_REQ_FLAGS) $(C_REQ_FLAGS) $(C_OPT_FLAGS)
 
 ifeq ($(WARN),yes)
       CFLAGS=$(C_REQ_FLAGS) $(C_OPT_FLAGS) $(C_WARN_FLAGS)
@@ -32,32 +29,37 @@ endif
 
 ifeq ($(DEBUG),yes)
 		CFLAGS=$(C_REQ_FLAGS) $(C_DEBUG_FLAGS)$(D_LEVEL)
-
 endif
 LDFLAGS=$(C_FLAGS) -lrt 
 
 
 OBJGPU = src/sac_utilities.o src/sac_io.o src/sac_g_engine.o GPU-SAC_gpu.o
-BINGPU = sac_gpu
+BINGPU = GPU-SAC_gpu
 
 OBJCPU = src/sac_utilities.o src/sac_io.o src/sac_engine.o GPU-SAC_cpu.o
-BINCPU = sac_cpu
+BINCPU = GPU-SAC_cpu
 
+ifeq ($(GPUCOMPUTING),1)
+BINCLEAN = GPU-SAC_gpu
+endif
+ifeq ($(GPUCOMPUTING),0)
+BINCLEAN = GPU-SAC_cpu
+endif
 ## $@ Es el token de la izquierda de los :
 ## $< Es el token de la derecha de los :
 ifeq ($(GPUCOMPUTING),1)
 $(BINGPU): $(OBJGPU)
-	$(NVCC)  $(CFLAGS) $(LDFLAGS) -o $@  $(OBJGPU) -lm
+	$(NVCC) -D GPU=1 $(CFLAGS) $(LDFLAGS) -o $@  $(OBJGPU) -lm
 endif
 ifeq ($(GPUCOMPUTING),0)
 $(BINCPU): $(OBJCPU)
-	$(CC) -DGPU=0 $(CFLAGS) $(LDFLAGS) -o $@  $(OBJCPU) -lm
+	$(CC) -D GPU=0 $(CFLAGS) $(LDFLAGS) -o $@  $(OBJCPU) -lm
 endif
 #$(BINCPU): $(OBJCPU)
 #	$(CC) $(CFLAGS) $(LDFLAGS) -o $@  $(OBJCPU) -lm
 	
 clean:
-	$(RM) $(OBJ) $(BINCPU) $(BINCPU) $(OBJCPU) $(OBJGPU)
+	$(RM) $(OBJ) $(BINCLEAN) $(OBJCPU) $(OBJGPU)
 
 cleanEx:
 	$(RM) $(OBJ) $(BIN) $(TEST)

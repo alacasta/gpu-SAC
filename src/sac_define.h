@@ -28,9 +28,8 @@ SOFTWARE.
 ---------------------------------------------------------*/
 
 #define _TDATA double
-#define RANDOMRAIN 0
+#define RANDOMRAIN 1
 #define SILENTMODE 1
-//#define GPU 1
 #define VTK 0
 #define _DUMP_OUTPUT 0
 #define nThreads 128

@@ -55,7 +55,7 @@ extern void sac_do_g_grid_timestep(sac_grid *stream, double t, double deltat,
 #endif
 
 #if GPU==1
-#include "sac_g_engine.cuh"
+#include "src/sac_g_engine.cuh"
 #endif
 
 int main(int argc, char *argv[])
