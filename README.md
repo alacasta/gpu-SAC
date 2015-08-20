@@ -1,9 +1,8 @@
 # gpu-SAC
 GPU-SAC is a GPU implementation of the Sacramento Soil Moisture Accounting (SAC-SMA) model. This hydrological model takes into account soil moisture content and forecast precipitation as well as temperatures and it simulates runoff.
 
-Schematic of the model is found in the following image ([UC Irvine](http://chrs.web.uci.edu/research/hydrologic_predictions/activities07.html))
 
-![Image of Yaktocat](http://chrs.web.uci.edu/images/sac_smal_medium.jpg)
+![Illustration](https://github.com/alacasta/gpu-SAC/blob/gh-pages/img/illustration.png)
 
 More information can be found [here](http://www.cbrfc.noaa.gov/wsup/sac_sm/cbrfc_sacsma_101_20140731.pdf) and [here](http://www.manureadvisorysystem.wi.gov/app/SACmodel).
 
