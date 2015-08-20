@@ -4,7 +4,7 @@ GPU-SAC is a GPU implementation of the Sacramento Soil Moisture Accounting (SAC-
 
 ![Illustration](https://github.com/alacasta/gpu-SAC/blob/gh-pages/img/illustration.png)
 
-More information can be found [here](http://www.cbrfc.noaa.gov/wsup/sac_sm/cbrfc_sacsma_101_20140731.pdf) and [here](http://www.manureadvisorysystem.wi.gov/app/SACmodel).
+More information about SAC-SMA can be found [here](http://www.cbrfc.noaa.gov/wsup/sac_sm/cbrfc_sacsma_101_20140731.pdf) and [here](http://www.manureadvisorysystem.wi.gov/app/SACmodel).
 
 ## Building Instructions
 
