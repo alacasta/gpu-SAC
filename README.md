@@ -8,7 +8,7 @@ More information about SAC-SMA can be found [here](http://www.cbrfc.noaa.gov/wsu
 
 ## Building Instructions
 
-You can use GNU Make with the Makefile rules to build the solution. **Note** You can choose wether compiling a CPU or GPU solution by modifying the following flag in the Makefile
+You can use GNU Make with the Makefile rules to build the solution. **Note** You can choose whether compiling a CPU or GPU solution by modifying the following flag in the Makefile
 
 ```Makefile
 #################################################################
