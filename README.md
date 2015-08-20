@@ -34,6 +34,11 @@ In addition, be sure about you have configured the project as you expected in th
 // Size of CUDA block
 #define nThreads 128
 ```
+Compilation using Make+Makefile can be done as
+```ShellSession
+> make clean
+> make
+```
 ## Performance
 In the [wiki](https://github.com/alacasta/gpu-SAC/wiki/Computational-Performance) you will find results on different architectures. You are also invited to include your results as well.
 
