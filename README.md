@@ -61,7 +61,8 @@ Click [here](http://alacasta.github.io/gpu-SAC/) for the GPU-SAC project website
 ## Licensing
 GPU-SAC is an OSS licensed under [MIT License](https://github.com/alacasta/gpu-SAC/blob/master/LICENSE.txt).
 
-
+## Input Data
+Precip maps based on NEXRAD information can be obtained from [NOAA](http://www.ncdc.noaa.gov/nexradinv/) after being transformed using the [NOAA's WCT](http://www.ncdc.noaa.gov/wct/index.php)
 
 
 
