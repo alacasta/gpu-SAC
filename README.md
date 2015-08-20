@@ -12,7 +12,7 @@ You can use GNU Make with the Makefile rules to build the solution. **Note** You
 
 ```Makefile
 #################################################################
-## Define wether uning CPU (GPU=0) or GPU (GPU=1)
+## Choose uning CPU (GPU=0) or GPU (GPU=1)
 GPUCOMPUTING=1
 #################################################################
 ```
