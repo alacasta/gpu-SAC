@@ -51,8 +51,8 @@ In the [wiki](https://github.com/alacasta/gpu-SAC/wiki/Computational-Performance
  - __sac_structs.h__ Data-types and structures
  - __sac_engine.*__ Main functions for the SAC-SMA model (CPU)
  - __sac_g_engine.*__ Main functions for the SAC-SMA model (GPU)
- - __sac_io.h__ input/output functions
- - __sac_utilities.h__ Miscelanea
+ - __sac_io.*__ input/output functions
+ - __sac_utilities.*__ Miscelanea
 - __Benchmark__ Includes configuration files for benchmarking.
 
 ## Project Website
